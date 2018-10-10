@@ -1,0 +1,114 @@
+.banner {
+  width: 980px;
+  height: 110px;
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+.banner__logo {
+  float: left;
+  margin-right: 10px;
+}
+
+.banner__text {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+}
+
+.banner__cards {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  bottom: 3px;
+}
+
+.banner__cards .banner__img-wrapper {
+  box-sizing: border-box;
+  width: 16.66%;
+  float: left;
+  width: 66px;
+  margin-right: -15px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.banner__cards .banner__img-wrapper:hover {
+  margin-right: 5px;
+}
+
+.banner__cards .banner__img-wrapper:hover img {
+  position: relative;
+  bottom: -30px;
+  transform: scale(1.3);
+}
+
+.banner__cards .banner__img-wrapper:last-child {
+  margin-right: unset;
+}
+
+.banner__cards .banner__img-wrapper:last-child:hover {
+  margin-right: 5px;
+}
+
+.banner__cards .banner__img-wrapper a {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+
+.banner__cards .banner__img-wrapper:hover a {
+  position: relative;
+  bottom: -30px;
+}
+
+.banner__cards:hover .banner__img-wrapper > a {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-out;
+}
+
+.banner__cards:hover .banner__img-wrapper > a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.4s ease-out;
+}
+
+.banner__url {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+}
